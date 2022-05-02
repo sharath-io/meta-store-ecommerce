@@ -15,7 +15,6 @@ return (
             <div className="meta-info">
                 <i className="fa fa-bolt"></i> Meta Store
                 <p className="description">Get your physical devices for virtual world</p>
-                <p className="description">Every device sold in meta store is compatible with the VR</p>
                 <div className="card-button">
                     <Link to="/Products">
                       <button className="card-buy">Meta devices</button>
