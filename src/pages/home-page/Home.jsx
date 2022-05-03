@@ -1,8 +1,9 @@
 import '../../styles/project.css';
 import './home.css';
-import {Banner, Headphones, Game, PC} from '../../assets';
+import {Banner} from '../../assets';
 import React from "react";
 import {Link} from "react-router-dom";
+import {cardData} from "../../utils/cardData.js"
 
 export function Home(){
 return (
@@ -17,7 +18,7 @@ return (
                 <p className="description">Get your physical devices for virtual world</p>
                 <div className="card-button">
                     <Link to="/Products">
-                      <button className="card-buy">Meta devices</button>
+                    <button className="card-buy">Meta devices</button>
                     </Link>
                 </div>
             </div>
@@ -28,61 +29,27 @@ return (
         Shop By categories
 
         <div className="card-container">
-
-            <div className="card  card-shadow">
+            {
+             cardData.map(cardItem =>(
+              <div className="card  card-shadow"  key ={cardItem.id}>
                 <div className="card-image fit">
-                    <img src={Headphones} alt="Headphones" />
+                    <img src={cardItem.image} alt={cardItem.Heading} />
                 </div>
                 <div className="card-heading">
-                    HeadPhones
+                    {cardItem.Heading}
                 </div>
-                <p className="tag">soundzy</p>
+                <p className="tag">{cardItem.caption}</p>
                 <div className="card-description">
-                    Best in sound
+                    {cardItem.description}
                 </div>
                 <div className="card-button">
                     <Link to="/Products">
-                    <button className="card-buy" >Explore</button>
+                      <button className="card-buy">Explore</button>
                     </Link>
                 </div>
-            </div>
-
-            <div className="card card-shadow">
-                <div className="card-image fit">
-                    <img src={Game} alt="Games" />
-                </div>
-                <div className="card-heading">
-                    Gaming Computers
-                </div>
-                <p className="tag">nextgen</p>
-                <div className="card-description">
-                    Best in Speed
-                </div>
-                <div className="card-button">
-                    <Link to="/Products">
-                    <button className="card-buy">Explore</button>
-                    </Link>
-
-                </div>
-            </div>
-
-            <div className="card card-shadow">
-                <div className="card-image fit">
-                    <img src={PC} alt="Personal Computer" />
-                </div>
-                <div className="card-heading">
-                    Laptops
-                </div>
-                <p className="tag">perfect</p>
-                <div className="card-description">
-                    Best in Performance
-                </div>
-                <div className="card-button">
-                    <Link to="/Products">
-                    <button className="card-buy">Explore</button>
-                    </Link>
-                </div>
-            </div>
+               </div>
+           ))
+            }
         </div>
     </div>
 </div>
