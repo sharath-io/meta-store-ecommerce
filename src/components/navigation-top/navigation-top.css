@@ -1,0 +1,14 @@
+.navbar {
+    border-radius: 0;
+    width: auto;
+    box-shadow: none;
+    border-bottom: 0.1rem solid var(--primary-color);
+    padding: 1.8rem;
+}
+.navbar .nav-heading .icon{
+    color: var(--secondary-color);
+}
+
+.navbar .nav-comp-list .nav-inline .link {
+    font-size: 1.2rem;
+}
