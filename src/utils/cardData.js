@@ -1,4 +1,4 @@
-import {Headphones, Game, PC} from "../assets/index";
+import {Headphones, Game, PC} from "../assets";
 const cardData = [
     {
         id:1,

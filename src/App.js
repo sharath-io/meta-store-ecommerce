@@ -2,7 +2,7 @@ import "./App.css";
 import {NavigationTop, Footer} from './components';
 import React from "react";
 import {Routes,Route} from "react-router-dom";
-import {Home,Products,Wishlist,Cart,PageNotFound} from "./pages/index.js";
+import {Home,Products,Wishlist,Cart,PageNotFound} from "./pages";
 
 function App() {
   return (
